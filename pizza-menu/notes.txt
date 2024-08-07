@@ -1,0 +1,11 @@
+React is made of Components
+
+::: Components :::
+
+-React applications are entirely made out of Components
+-Building blocks of user interfaces in React
+-Piece of UI that has its own data, logic, and appearance (how it works, how it looks)
+-We build complex UIs by building multiple components and combining them!
+-Components can be reused, nested inside each other, and pass data between them
+
+Component Trees can be useful as a visualization
