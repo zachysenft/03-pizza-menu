@@ -9,3 +9,70 @@ React is made of Components
 -Components can be reused, nested inside each other, and pass data between them
 
 Component Trees can be useful as a visualization
+
+::: What is JSX :::
+
+-> Declarative syntax to describe what components look like and how they work
+-> Components must return a block of JSX
+-> JSX is an extension of javascrip that allows us to embed javascript, css, and react components into html
+
+-Tool called 'Babel' automatically converts JSX to javascript!
+-Browsers understand html, not jsx... so behind the scenes, jsx is converted into nested react.createElement function calls, 
+which in the end create the html elements on screen
+
+-Each JSX element is converted to a React.createElement function call
+-We could use react without JSX at all if we wanted to, but makes it really hard to read and understand
+
+JSX is Declarative
+Imperative -> Manual DOM element selections and DOM traversing. Step by step DOM mutations until we reach desired UI.
+    -> "How to do things"
+
+Declarative -> Describe what the UI should look like at all times using JSX, based on current data (props and state), no DOM manipulation
+    -> React is a huge extraction away from DOM, we never touch the DOM
+    -> Instead, think of the UI as a reflection of current data
+    -> "What we want"
+
+
+
+::: Separation of Concerns :::
+
+From the rise of single page applications (SPA)
+-> Before, we always had 1 file for HTML, 1 for JS, 1 for CSS (traditional separation of concerns), one technology per file
+-> Now, javascript has become more and more in charge of the html (doesn't make sense without js)
+    -Logic and UI are tightly coupled, so why keep separate? This is what gave us React components and JSX, because logic and ui are
+    so coupled in modern applications. So React Components contains it all!
+    -This logic and ui being tightly coupled is the fundamental reason for needing components.
+
+-> One COMPONENT per file now, not one technology. HTML and JS are colocated
+-> "react has no separation of concerns"... its just not one concern per file, its one concern per component. [NEW PARADIGM]
+
+
+::: Reviewing Props :::
+
+-> Props are used to pass data from parent components to child components (down the component tree)
+-> Essentail tool to configure and customize components (like function parameters)
+-> With props, parent components control how the child components look and work
+-> Anything can be passed as props: 
+    -single values
+    -arrays
+    -objects
+    -functions
+    -other components
+
+**Props are read only**
+
+Data within a component are made out of:
+    1. Props - data coming from the outside, and can only be updated by the parent component
+    2. State - internal data that can be updated by the components logic
+
+-> Props are read-only and IMMUTABLE! This is one of React's strict rules
+-> If you need to mutate props, you actually need state
+    -WHY?
+    -> Mutating props would affect parent, creating side effects (not pure)
+
+    -Components have to be pure functions in terms of props and state
+    -This allows React to optimize apps, avoid bugs, make it predictable
+
+One Way Data Flow
+->Data can only be passed from parent to child components.
+->Makes applications more predictable and easier to understand, debug as we have more control, and is more performant
