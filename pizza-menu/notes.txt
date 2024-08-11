@@ -76,3 +76,25 @@ Data within a component are made out of:
 One Way Data Flow
 ->Data can only be passed from parent to child components.
 ->Makes applications more predictable and easier to understand, debug as we have more control, and is more performant
+
+
+::: Rules of JSX :::
+
+-> Basically works like HTML, but can enter javascript mode by using {} for text or attributes
+    -Can be used to: reference variables, create arrays or objects, map, ternary statement
+    -Statements are not allowed (if/else, switch, for)
+-> JSX produces a JavaScript expression
+    1. Can place other pieces of JSX inside {}
+    2. Can write JSX anywhere inside a component (in if/else, assign to variables, pass into functions)
+-> A piece of JSX can only have one root element... if you need more use <React.fragment> or the short <>
+
+::: Differences between JSX and HTML :::
+
+-className instead of class
+-htmlFor instead of for
+-Every tag needs to be closed
+-All event handlers and other properties need to be camelCased
+    -Exception: aria-* and data-* are written with dashes like in HTML
+-CSS inline styles are written like: {{<style>}} to reference a variable, and then an object, and are also camelCased
+-Comments need to be in {} because they are JS
+
