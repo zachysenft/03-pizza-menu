@@ -98,3 +98,13 @@ One Way Data Flow
 -CSS inline styles are written like: {{<style>}} to reference a variable, and then an object, and are also camelCased
 -Comments need to be in {} because they are JS
 
+
+::: SECTION SUMMARY :::
+
+-> Components are the building blocks of any UI in react (Data, JS logic, JSX appearance)
+-> Each component has its own data, logic, js logic, appearance (declarative syntax called JSX and is what we return from component)
+-> JSX can contain html, css, js inside
+-> Component Trees
+-> Parent components can pass data directly into child component using props (only passed down the tree, not up)
+-> Render multiple components at once using the JS map() method to create a list of pizzas
+-> Components can be conditionally rendered using JS tools such as: &&, ?, or multiple return statements
